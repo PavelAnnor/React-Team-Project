@@ -7,6 +7,7 @@ export default async function fetchData(query){
          const result = await fetch(url);
          const data = await result.json();
          console.log(data.products);
+         return data
         
     } catch (error) {
         

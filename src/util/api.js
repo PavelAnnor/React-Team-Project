@@ -2,11 +2,19 @@
 export default async function fetchData(query){
 
 
-    const url = `https://dummyjson.com/products/search?q=${query}&limit=0`;
+    try {
+         const url = `https://dummyjson.com/products/search?q=${query}&limit=0`;
+         const result = await fetch(url);
+         const data = await result.json();
+         console.log(data.products);
+        
+    } catch (error) {
+        
+        console.log(error)
+    }
 
-    const result = await fetch(url);
-    const data = await result.json()
-    console.log(data.products)
+
+   
 
 
 }

@@ -2,7 +2,8 @@
 import fetchData from "../util/api";
 
 
-import {useState} from "react"
+import {useState,useRef,useContext} from "react"
+import { ProductContext } from "../util/context";
 
 
 
@@ -10,11 +11,20 @@ import {useState} from "react"
 
 export default function Searchbar(){
 
+    const {items, setItems} = useContext(ProductContext)
+   
+    
+
+    const searchText = useRef()
 
 
-    function handleSearch(e){
+
+
+    async function handleSearch(e){
 
         e.preventDefault();
+        const i =  await fetchData(searchText.current.value)
+        setItems(i) 
 
     }
     return (
@@ -24,7 +34,7 @@ export default function Searchbar(){
 
           <div className="searchbar">
             <img src = "./magnifying-glass.png"></img>
-            <input placeholder="Search for An Item"></input>
+            <input placeholder="Search for An Item" ref = {searchText}></input>
           </div>
 
          

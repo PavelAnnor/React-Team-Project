@@ -41,7 +41,7 @@ form{
 .searchbar{
     width: 60%;
     height: 70px;
-    border: solid rgb(36, 2, 2);
+    border: solid rgb(0, 0, 0);
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -69,8 +69,9 @@ form{
 
 
 .searchButton{
-    background-color: rgb(105, 105, 234);
+    background-color: rgb(27, 27, 207);
+    color: white;
     width: 10%;
-    height: 5vh;
+    height: 8vh;
     border-radius: 10px;;
 }

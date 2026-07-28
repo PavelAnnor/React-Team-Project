@@ -18,7 +18,7 @@ function Header({text}){
 
     return (
       <header>
-        <h1 class="headerText">{text}</h1>
+        <h1 className="headerText">{text}</h1>
       </header>
     );
 

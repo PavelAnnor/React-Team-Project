@@ -1,4 +1,8 @@
 
+import fetchData from "../util/api";
+
+
+await fetchData("bag");
 
 
 export default function Searchbar(){

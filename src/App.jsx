@@ -5,7 +5,7 @@ import Favorite from "./pages/Favorites"
 import Home from "./pages/Home"
 import ItemDetails from "./pages/ItemDetails"
 import NotFound from "./pages/NotFound"
-import context from "./util/context"
+// import Pro from "./util/context"
 import fetchData from "./util/api"
 
 
@@ -28,7 +28,7 @@ export default function App(){
    
   },[])
 
-//  const addFavorite = (item)
+
 
   return(
 <Routes>

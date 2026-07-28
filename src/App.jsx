@@ -12,12 +12,15 @@ import fetchData from "./util/api";
 import "./styles/App.css"
 
 export default function App() {
+  const [items,setItems] = useState([])
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/favorites" element={<Favorite />} />
-      <Route path="/items/:id" element={<ItemDetails />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <ProductContext.Provider value = {{items,setItems}}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favorites" element={<Favorite />} />
+        <Route path="/items/:id" element={<ItemDetails />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ProductContext.Provider>
   );
 }

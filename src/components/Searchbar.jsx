@@ -11,7 +11,8 @@ import { ProductContext } from "../util/context";
 
 export default function Searchbar(){
 
-    // const {prodcuts, setProducts} = useContext(ProductContext)
+    const {items, setItems} = useContext(ProductContext)
+   
     
 
     const searchText = useRef()
@@ -19,11 +20,11 @@ export default function Searchbar(){
 
 
 
-    function handleSearch(e){
+    async function handleSearch(e){
 
         e.preventDefault();
-        
-        
+        const i =  await fetchData(searchText.current.value)
+        setItems(i) 
 
     }
     return (

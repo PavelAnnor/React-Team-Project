@@ -6,7 +6,7 @@ import Home from "./pages/Home"
 import ItemDetails from "./pages/ItemDetails"
 import NotFound from "./pages/NotFound"
 import context from "./util/context"
-import api from "./util/api"
+import fetchData from "./util/api"
 
 
 
@@ -16,15 +16,22 @@ export default function App(){
   const [favoriteItems,] = useState([]);
   const [theme, setTheme] = useState("light");
 
+
+  const getData = async () => {
+ const data = await fetchData() 
+ setItems(data)
+}
+
   useEffect(() => {
-    getItems()
+   getData()
 
-    const addFavorite = (item)
-  })
+   
+  },[])
 
+//  const addFavorite = (item)
 
   return(
- <Routes>
+<Routes>
 <Route path="/" element={<Home />} />
 <Route path="/favorites" element={<Favorite/>} />
 <Route path="/items/:id" element={<ItemDetails />} />

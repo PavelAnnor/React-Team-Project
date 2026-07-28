@@ -3,6 +3,7 @@ import fetchData from "../util/api";
 
 
 import {useState,useRef,useContext} from "react"
+import { ProductContext } from "../util/context";
 
 
 
@@ -10,6 +11,7 @@ import {useState,useRef,useContext} from "react"
 
 export default function Searchbar(){
 
+    const {prodcuts, setProducts} = useContext(ProductContext)
 
     const searchText = useRef()
 

@@ -1,4 +1,4 @@
-
+import {Link} from "react-router"
 
 
 function NotFound() {
@@ -6,7 +6,7 @@ function NotFound() {
         <>
         <h1>404 - Page Not Found</h1>
         <p>This item does not exist.</p>
-        <link to="/"> Home Page</link> 
+        <Link to="/"> Home Page</Link> 
         </>
     );
 }

@@ -5,7 +5,7 @@ import Favorite from "./pages/Favorites"
 import Home from "./pages/Home"
 import ItemDetails from "./pages/ItemDetails"
 import NotFound from "./pages/NotFound"
-import context from "./util/context"
+import {ProductContext} from "./util/context"
 import fetchData from "./util/api"
 
 
@@ -15,7 +15,7 @@ export default function App(){
   const [items, setItems] = useState([]);
   const [favoriteItems,] = useState([]);
   const [theme, setTheme] = useState("light");
-
+console.log(items)
 
   const getData = async () => {
  const data = await fetchData() 

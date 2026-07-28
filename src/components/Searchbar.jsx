@@ -2,7 +2,10 @@
 import fetchData from "../util/api";
 
 
-await fetchData("bag");
+import {useState} from "react"
+
+
+
 
 
 export default function Searchbar(){

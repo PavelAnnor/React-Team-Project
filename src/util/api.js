@@ -1,5 +1,5 @@
 
-export default async function fetchData(query,limit){
+export default async function fetchData(query){
 
 
     const url = `https://dummyjson.com/products/search?q=${query}&limit=0`;

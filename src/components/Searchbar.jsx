@@ -11,7 +11,7 @@ import { ProductContext } from "../util/context";
 
 export default function Searchbar(){
 
-    const {prodcuts, setProducts} = useContext(ProductContext)
+    // const {prodcuts, setProducts} = useContext(ProductContext)
     
 
     const searchText = useRef()

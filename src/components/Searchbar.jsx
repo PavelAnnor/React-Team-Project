@@ -2,7 +2,7 @@
 import fetchData from "../util/api";
 
 
-import {useState} from "react"
+import {useState,useRef} from "react"
 
 
 
@@ -11,10 +11,17 @@ import {useState} from "react"
 export default function Searchbar(){
 
 
+    const searchText = useRef()
+
+
+
 
     function handleSearch(e){
 
         e.preventDefault();
+        searchText.current = searchText.current.value
+        console.log(searchText.current)
+        
 
     }
     return (
@@ -24,7 +31,7 @@ export default function Searchbar(){
 
           <div className="searchbar">
             <img src = "./magnifying-glass.png"></img>
-            <input placeholder="Search for An Item"></input>
+            <input placeholder="Search for An Item" ref = {searchText}></input>
           </div>
 
          

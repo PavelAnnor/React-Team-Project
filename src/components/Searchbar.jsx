@@ -2,7 +2,7 @@
 import fetchData from "../util/api";
 
 
-import {useState,useRef} from "react"
+import {useState,useRef,useContext} from "react"
 
 
 
@@ -19,8 +19,7 @@ export default function Searchbar(){
     function handleSearch(e){
 
         e.preventDefault();
-        searchText.current = searchText.current.value
-        console.log(searchText.current)
+        
         
 
     }

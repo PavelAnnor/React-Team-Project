@@ -1,0 +1,77 @@
+
+h1{
+    margin: 0px;
+}
+
+main{
+    width: 100%;
+}
+
+header{
+    background-color: rgb(3, 3, 61);
+    margin: 0px;
+    padding: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+
+
+
+
+.headerText{
+    color:white;
+}
+
+
+/* Styles for searchbar.jsx */
+.searchbarSection {
+    
+    padding: 20px;
+}
+
+.searchbar{
+    width: 60%;
+    height: 70px;
+    border: solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+   
+
+}
+
+.searchbar img{
+    aspect-ratio: 1;
+    width: 8%;
+    
+}
+
+
+.searchbarSection input{
+
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding-left: 10px;
+    outline: none;
+}
+
+
+.searchButton{
+    background-color: rgb(27, 27, 207);
+    color: white;
+    width: 10%;
+    height: 8vh;
+    border-radius: 10px;;
+}

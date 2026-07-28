@@ -12,7 +12,15 @@ import api from "./util/api"
 
 
 export default function App(){
+  const [items, setItems] = useState([]);
+  const [favoriteItems,] = useState([]);
+  const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    getItems()
+
+    const addFavorite = (item)
+  })
 
 
   return(
